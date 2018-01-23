@@ -11,7 +11,7 @@ $(function() {
 	var span = $("span");
 	span.each(function(index, element) {
 		$("span:even").css("color","#b76fa5");
-		$ ("span:odd").css("color","darkgreen");
+		$("span:odd").css("color","darkgreen");
 	});
 
 	var spanText = span.eq(1).text();
@@ -24,7 +24,7 @@ $(function() {
 	    $(element).append(button);
 	});
 
-	$("button").click(function() {
+	$("button").on("click", function() {
 		alert($(this).attr("data-tmp"));
 	});
 
@@ -34,7 +34,7 @@ $(function() {
 	var lastParagraph = '<div><p><a href="#">Message</a></p></div>';
 	container.append(lastParagraph);
 
-	$("a").click(function(event) {
+	$("a").on("click", function(event) {
 		alert('Thanks for visiting!');
 		event.preventDefault();
 		$(this).hide("slow");
